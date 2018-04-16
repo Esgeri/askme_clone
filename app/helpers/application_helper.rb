@@ -6,4 +6,8 @@ module ApplicationHelper
       asset_path 'avatar.png'
     end
   end
+
+  def questions_count
+    I18n.translate('question', count: @questions.count)
+  end
 end

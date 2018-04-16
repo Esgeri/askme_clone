@@ -11,6 +11,10 @@
     <%= @user.username %>
   </h2>
 
+  <div class="text-center buffer-both">
+    <h2 class="text-small"><%= @questions.count %> <%= questions_count %></h2>
+  </div>
+
   <div class="user-ask-button container text-center">
     <%= link_to "Ask me", '', class: 'button button-light', id: 'ask-button' %>
   </div>

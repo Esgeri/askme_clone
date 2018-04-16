@@ -28,7 +28,11 @@ class UsersController < ApplicationController
       avatar_url: 'http://secure.gravatar.com/avatar'
     )
 
-    @questions = [Question.new(text: 'Whats up?', created_at: Date.parse('13.04.2018'))]
+    @questions = [
+      Question.new(text: 'Whats up?', created_at: Date.parse('13.04.2018')),
+      Question.new(text: 'How do you do?', created_at: Date.parse('14.04.2018')),
+      Question.new(text: 'How are you?', created_at: Date.parse('16.04.2018'))
+    ]
 
     @new_question = Question.new
   end
