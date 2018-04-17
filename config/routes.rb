@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   get "show" => "user#show"
 
-  resources :users
+  resources :users, except: [:destroy]
   resources :questions
 end
