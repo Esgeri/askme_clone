@@ -14,18 +14,23 @@
         <% end %>
 
         <div class="form-field">
-          <%= f.label :username, 'Никнейм', class: 'form-label' %>
+          <%= f.label :username, 'Никнейм (@nickname)', class: 'form-label' %>
           <%= f.text_field :username, class: 'form-text-field' %>
         </div>
 
         <div class="form-field">
-          <%= f.label :name, 'Имя', class: 'form-label' %>
+          <%= f.label :name, 'Имя (Nick)', class: 'form-label' %>
           <%= f.text_field :name, class: 'form-text-field' %>
         </div>
 
         <div class="form-field">
           <%= f.label :avatar_url, 'URL аватара', class: 'form-label' %>
           <%= f.text_field :avatar_url, class: 'form-text-field' %>
+        </div>
+
+        <div class="form-field">
+          <%= f.label 'Цвет фона', class: 'form-label' %>
+          <%= color_field :user, :background_color %>
         </div>
 
         <div class="buffer-top-large buffer-bottom">
