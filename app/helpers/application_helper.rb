@@ -10,4 +10,8 @@ module ApplicationHelper
   def questions_count
     I18n.translate('question', count: @questions.count)
   end
+
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
 end
