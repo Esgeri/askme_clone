@@ -41,6 +41,14 @@ class UsersController < ApplicationController
     @new_question = @user.questions.build
   end
 
+  def destroy
+    if @user.destroy
+      redirect_to root_url, notice: 'Ваш профиль удалён!'
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def authorize_user
