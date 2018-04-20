@@ -3,6 +3,12 @@
 
 <div class="question">
   <div class="question-content">
+    <% if question.questioning_user.present? %>
+      Вопрос от пользователя: <%= link_to "#{question.questioning_user.username}",
+                                                                        user_path(question.questioning_user) %>
+    <% else %>
+      Вопрос от анонима
+    <% end %>
     <div class="question-text text-lead">
       <%= question.text %>
     </div>
