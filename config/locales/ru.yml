@@ -3,4 +3,14 @@ ru:
     zero: вопросов
     one: вопрос
     few: вопроса
-    other: вопросов
+    many: вопросов
+  answer:
+    zero: ответов
+    one: ответ
+    few: ответа
+    many: ответов
+  unanswered:
+    zero: безответных
+    one: безответный
+    few: безответных
+    many: безответных

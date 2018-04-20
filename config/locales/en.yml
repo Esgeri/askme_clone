@@ -21,7 +21,11 @@
 
 en:
   question:
-    zero: questions
     one: question
-    few: questions
     other: questions
+  answer:
+    one: answer
+    other: answers
+  unanswered:
+    one: un answered
+    other: un answereds

@@ -15,10 +15,6 @@
     <%= @user.username %>
   </h2>
 
-  <div class="text-center buffer-both">
-    <h2 class="text-small"><%= @questions.count %> <%= questions_count %></h2>
-  </div>
-
   <div class="user-ask-button container text-center">
     <%= link_to "Ask me", '', class: 'button button-light', id: 'ask-button' %>
   </div>
@@ -26,22 +22,21 @@
 
 <div class="user-details">
   <div class="user-ask-button container text-center">
-    <%#Используем встроенный в rails хелпер link_to%>
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
 
   <div class="user-statistics container text-center">
     <div class="column-1-3">
       <h1 class="title-small"><%= @questions_count %></h1>
-      <p>вопросов</p>
+      <p><%= questions_count %></p>
     </div>
     <div class="column-1-3">
       <h1 class="title-small"><%= @answers_count %></h1>
-      <p>ответов</p>
+      <p><%= answers_count %></p>
     </div>
     <div class="column-1-3">
       <h1 class="title-small"><%= @unanswered_count %></h1>
-      <p>безответных</p>
+      <p><%= unanswered_count %></p>
     </div>
   </div>
 </div>
