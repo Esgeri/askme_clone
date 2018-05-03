@@ -1,7 +1,12 @@
 class QuestionsController < ApplicationController
   before_action :load_question, only: [:show, :edit, :update, :destroy]
 
-  before_action :authorize_user, except: [:create]
+  before_action :authorize_user, except: [:create, :hashtags]
+
+  def hashtags
+    @tag = Tag.find_by(name: params[:name])
+    @questions = @tag.questions
+  end
 
   # GET /questions/1/edit
   def edit

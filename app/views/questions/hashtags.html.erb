@@ -1,0 +1,15 @@
+<div class="column-4-4">
+  <% if @tag.present? %>
+    <div class="title-medium color-white buffer-top">
+      <%= "Hashtag '#{@tag.name}' find in:" %>
+    </div>
+  <% end %>
+
+  <div class="user-questions buffer-both">
+    <div class="questions-list">
+      <% @questions.each do |question| %>
+          <%= render partial: 'questions/question', object: question %>
+      <% end %>
+    </div>
+  </div>
+</div>

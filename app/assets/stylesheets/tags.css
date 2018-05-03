@@ -1,0 +1,12 @@
+.tag {
+  color: blue;
+  text-decoration: underline;
+}
+
+.tag:hover {
+  color: red;
+}
+
+.color-white {
+  color: white;
+}

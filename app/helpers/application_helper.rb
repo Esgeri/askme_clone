@@ -7,6 +7,10 @@ module ApplicationHelper
     end
   end
 
+  def render_with_hashtags(text)
+    text.gsub(/#\w+/){|word|  link_to word, "/questions/hashtag/#{word.delete('#')}", class: 'tag'}.html_safe
+  end
+
   def questions_count
     I18n.translate('question', count: @questions.count)
   end
