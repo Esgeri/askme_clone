@@ -16,7 +16,7 @@
   </h2>
 
   <div class="user-ask-button container text-center">
-    <%= link_to "Ask me", '', class: 'button button-light', id: 'ask-button' %>
+    <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
 </div>
 
@@ -48,14 +48,14 @@
           <%= f.hidden_field :user_id %>
 
           <div class="form-field">
-            <%= f.label "Your question for #{@user.username}", class: 'form-label' %>
+            <%= f.label "Ваш вопрос для #{@user.username}", class: 'form-label' %>
             <%= f.text_area :text, class: 'form-textarea' %>
           </div>
 
           <%= recaptcha_tags size: 'compact' unless current_user.present? %>
 
           <div class="form-action">
-            <%= submit_tag 'Ask question', class: 'button button-small button-dark' %>
+            <%= submit_tag 'Задать вопрос', class: 'button button-small button-dark' %>
           </div>
       <% end %>
     </div>
