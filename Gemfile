@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
@@ -12,8 +9,13 @@ gem 'puma', '~> 3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'russian'
+
+gem 'recaptcha', require: 'recaptcha/rails'
+
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
@@ -32,6 +34,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'russian'
-
-gem 'rails_12factor'
