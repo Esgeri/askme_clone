@@ -27,5 +27,5 @@ en:
     one: answer
     other: answers
   unanswered:
-    one: un answered
-    other: un answered
+    one: unanswered
+    other: unanswered

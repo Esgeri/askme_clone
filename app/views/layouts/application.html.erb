@@ -9,8 +9,6 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
-    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body>
@@ -20,19 +18,13 @@
           <h1 class="header-title"><%= link_to "Good questions", root_path %></h1>
         </div>
 
-        <%= render 'layouts/header' %>
+        <%= render 'layouts/app/header' %>
       </div>
     </div>
 
     <div class="content">
       <div class="container">
-        <% if flash.any? %>
-          <div class="content-wrapper buffer-both">
-            <% flash.each do |name, message| %>
-              <%= content_tag :div, message, class: "flash-#{name}" %>
-            <% end %>
-          </div>
-        <% end %>
+        <%= render 'layouts/app/flash' %>
 
         <%= yield %>
       </div>
