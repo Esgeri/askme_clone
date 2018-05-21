@@ -1,24 +1,31 @@
-# README
+# Askme prototype application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+***
+Askme is a social network.
+The training application is an Askme.fm clone.
 
-Things you may want to cover:
+##### Web page:
+[Askme clone](https://askmeprototype.herokuapp.com) on heroku
 
-* Ruby version
+### Launching
+***
+##### Requirements:
+* Ruby version _>= 2.4.1_
+* Rails version _'~> 5.0.7'_
 
-* System dependencies
+##### Commands
+Clone the repository to your local machine and run following commands:
 
-* Configuration
+```
+$ bundle
+```
 
-* Database creation
+```
+$ bundle exec rake db:migrate
+```
 
-* Database initialization
+```
+$ bundle exec rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Open a `localhost:3000` page in your browser.
