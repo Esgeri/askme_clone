@@ -28,5 +28,16 @@ module AskmeClone
     config.i18n.locale = :en
 
     config.i18n.fallbacks = [:en]
+
+    config.generators do |g|
+      g.test_framework :rspec,
+                                    fixtures: true,
+                                    view_spec: false,
+                                    helper_specs: false,
+                                    routing_specs: false,
+                                    request_specs: false,
+                                    controller_spec: true
+      g.fixture_replacement :factory_bot_rails, dir: 'spec/factories'
+    end
   end
 end
