@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :background_color, format: { with: /\A#?(?:[A-F0-9]{3}){1,2}\z/i }
 
   before_save :encrypt_password
-  before_validation { self.username.downcase! }
+  before_validation { self.username.downcase! if attribute_present? 'username' }
 
   def encrypt_password
     if self.password.present?
